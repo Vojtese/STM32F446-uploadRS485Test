@@ -44,36 +44,12 @@ This repository contains a firmware test application for validating RS485-based 
 
 ---
 
-## 📊 Architecture Overview
-
-This firmware simulates the reception and parsing of firmware packets over RS485. It does not write to Flash or perform application jumps.
-
-```
-[GUI Uploader] → [RS485] → [STM32F446-uploadRS485Test]
-                                 ↓
-                        Parse + CRC Check
-                                 ↓
-                          (No Flash Write)
-```
-
----
-
 ## 🔗 Related Projects
 
 - [STM32F446-Bootloader](https://github.com/Vojtese/STM32F446-Bootloader)
 - [STM32F446-APP1](https://github.com/Vojtese/STM32F446-APP1)
 - [STM32F446-APP2](https://github.com/Vojtese/STM32F446-APP2)
 - [serial_BIN_file_transfer](https://github.com/Vojtese/serial_BIN_file_transfer)
-
----
-
-## 🛠️ TODO & Improvements
-
-- [ ] Add actual Flash erase/write logic
-- [ ] Add IAPstruct handling and jump logic
-- [ ] Add LED or UART feedback for packet status
-- [ ] Add watchdog reset after flashing
-- [ ] Integrate with bootloader memory map
 
 ---
 
